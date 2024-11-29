@@ -1,0 +1,1226 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.navbar {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  z-index: 4000;
+  background-color: #e9e9e9;
+}
+
+.banner {
+  display: flex;
+  overflow: hidden;
+  height: 90vh;
+  background: #111;
+}
+
+.banner:hover img {
+  opacity: 0.5;
+}
+
+.banner img {
+  max-width: 250px;
+  vertical-align: middle;
+  border: 1px solid black;
+  box-sizing: border-box;
+  transition: opacity .2s;
+}
+
+.banner img:hover {
+  opacity: 1;
+}
+
+.banner .column {
+  animation: var(--animation, none) 16s infinite linear;
+}
+
+.banner .column:hover {
+  animation-play-state: paused;
+}
+
+.banner .column:nth-of-type(odd) {
+  align-self: flex-end;
+  --direction: 50%;
+}
+
+@keyframes slide {
+  to {
+    transform: translateY(var(--direction, -50%))
+  }
+}
+
+.navbar nav {
+  width: 600px;
+  display: flex;
+  justify-content: end;
+}
+
+.navbar nav ul {
+  display: flex;
+  list-style: none;
+}
+
+.navbar nav ul li {
+  margin: 15px;
+  font-size: 18px;
+}
+
+.navbar nav ul li a {
+  text-decoration: none;
+  color: #0A3B4C;
+  position: relative;
+  padding-bottom: 5px;
+  transition: color 0.3s ease;
+}
+
+.navbar nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #0A3B4C;
+  transition: width 0.3s ease;
+}
+
+.navbar nav ul li:hover a {
+  color: #0A3B4C;
+}
+
+.navbar nav ul li:hover a::after {
+  width: 100%;
+}
+
+.mitologia_foto img {
+  width: 80%;
+  position: relative;
+  top: 36px;
+  right: 100px;
+}
+
+.sobre {
+  display: flex;
+}
+
+.text p {
+  color: #71A7B7;
+  font-size: 30px;
+}
+
+.efeito {
+  height: 40px;
+  border-bottom: 2px solid #71A7B7;
+  margin-right: 20px;
+}
+
+/* sobre a mitologia  */
+.sobre_mitologia {
+  width: 100%;
+  height: 80vh;
+}
+
+.sobre_mitologia .header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.mito {
+  width: 100%;
+  height: 60vh;
+  display: flex;
+}
+
+.fotos_mito {
+  width: 50%;
+  height: 135%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fotos_mito .foto1 {
+  width: 35%;
+  position: relative;
+  left: 100px;
+  box-shadow: 0px 4px 15px #0A3B4C;
+}
+
+.fotos_mito.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fotos_mito .foto2 {
+  width: 25%;
+  position: relative;
+  top: 200px;
+  box-shadow: 0px 5px 20px #0A3B4C;
+
+}
+
+.text_mito {
+  width: 50%;
+  height: 160%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.text_mito p {
+  margin: 20px;
+  width: 600px;
+
+}
+
+
+
+/*  codigo dos cards de mitologia  */
+
+.mitologia {
+  width: 100%;
+  height: auto;
+  font-family: 'Roboto Slab', serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #333333;
+  text-align: center;
+}
+
+.header {
+  margin-top: 50px;
+}
+
+.mitologia .header {
+  margin-top: 200px;
+}
+
+.header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  margin: 0;
+}
+
+.header p {
+  font-size: 18px;
+  color: #999999;
+  margin: 0;
+}
+
+.header .underline {
+  width: 50px;
+  height: 3px;
+  background-color: #f5a623;
+  margin: 10px auto;
+}
+
+.container {
+  width: 70%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 200px;
+  margin: 0 40px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+}
+
+.card img {
+  width: 100%;
+  border-radius: 100px;
+  border: 5px solid white;
+  transition: border 5s ease;
+  transition: transform 1s ease;
+}
+
+.card:hover img {
+  border: 5px solid #ffd900a1;
+  transform: scale(1.05);
+}
+
+.card .category {
+  font-size: 14px;
+  color: #999999;
+  margin-top: 10px;
+}
+
+.card .title {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+.card .guide {
+  font-size: 16px;
+  color: #999999;
+}
+
+.card .icon {
+  margin-top: 10px;
+}
+
+.card .icon img {
+  width: 40px;
+  height: 40px;
+}
+
+/* pagina de comentario */
+.comentario {
+  width: 100%;
+  height: 60vh;
+  background-color: #0A3B4C;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: white;
+  font-size: 40px;
+
+}
+
+.comentario p {
+  margin: 05px;
+}
+
+.comentario h3 {
+  margin: 10px;
+}
+
+.comentario button {
+  width: 150px;
+  height: 50px;
+  font-size: 17px;
+  background-color: white;
+  color: #0A3B4C;
+  border: none;
+  border-radius: 10px;
+  margin-top: 35px;
+  box-shadow: 0px 4px 10px #71A7B7;
+  transition: transform 0.5s ease;
+}
+
+.comentario button:hover {
+  transform: scale(1.1);
+}
+
+/* pagina sobre deuses */
+
+.algo {
+  width: 100%;
+  height: auto;
+}
+
+.deus-container {
+  text-align: center;
+  padding: 50px;
+}
+
+.deus-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  color: #1a3d3b;
+  margin-bottom: 10px;
+}
+
+.deus-subtitle {
+  font-size: 14px;
+  color: #666666;
+  margin-bottom: 30px;
+}
+
+.deus-underline {
+  width: 50px;
+  height: 3px;
+  background-color: #d4af37;
+  margin: 0 auto 50px auto;
+}
+
+.deus-card-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.deus-card {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  text-align: left;
+  overflow: hidden;
+  margin: 20px;
+}
+
+.deus-card img {
+  width: 100%;
+  height: auto;
+  transition: transform 1s ease;
+}
+
+.deus-card:hover img {
+  transform: scale(1.1);
+}
+
+.deus-card-content {
+  padding: 20px;
+}
+
+.deus-card-collection {
+  font-size: 12px;
+  color: #999999;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.deus-card-title {
+  font-size: 18px;
+  color: #1a3d3b;
+  margin-bottom: 10px;
+}
+
+.deus-card-description {
+  font-size: 14px;
+  color: #666666;
+  margin-bottom: 20px;
+}
+
+.deus-card-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  color: #1a3d3b;
+  text-decoration: none;
+  border: 1px solid #1a3d3b;
+  border-radius: 5px;
+  padding: 5px 10px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.deus-card-button:hover {
+  background-color: #1a3d3b;
+  color: #ffffff;
+}
+
+.deus-card-icon {
+  font-size: 24px;
+  color: #d4af37;
+  margin-bottom: 10px;
+}
+
+
+/* rodape  */
+
+
+
+.text {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.text .titulo {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+hr {
+  width: 90%;
+
+}
+
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
+.rodape {
+  width: 100%;
+  height: 70vh;
+  background-color: #e9e9e9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.rodape .rodape_sobre {
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  flex-direction: row;
+
+}
+
+.text_rodape {
+  width: 50%;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.text_rodape img {
+  width: 100px;
+  margin-left: -400px;
+  margin-bottom: 20px;
+}
+
+.text_rodape p {
+  width: 500px;
+  font-size: 20px;
+
+}
+
+.text_rodape button {
+  width: 200px;
+  height: 40px;
+  font-size: 15px;
+  border: none;
+  margin-left: -300px;
+  margin-top: 50px;
+}
+
+.text_rodape button:hover {
+  border: 1px solid black;
+}
+
+.mito_rodape {
+  width: 50%;
+  height: 60vh;
+}
+
+.mito_rodape h1 {
+  font-size: 30px;
+  margin-left: 100px;
+  margin-top: 150px;
+}
+
+.mito_rodape .listas {
+  display: flex;
+}
+
+.mito_rodape .listas .lista {
+  margin-left: 100px;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.mito_rodape .listas .lista li {
+  margin-top: 10px;
+}
+
+.rodape footer {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+}
+
+.rodape footer p {
+  margin-left: 75px;
+}
+
+.banner-deus {
+  width: 100%;
+  height: 80vh;
+  background-color: #0A3B4C;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-deus .mitologia_foto {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  top: 96px;
+}
+
+.banner-deus .text {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  top: 50px;
+}
+
+.banner-deus .text h1,
+h2 {
+  font-size: 60px;
+  color: white;
+}
+
+.banner-deus .text .cx {
+  margin-left: 150px;
+}
+
+.deus_sobre {
+  width: 100%;
+  height: 110vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.deus_sobre .header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+}
+
+.deus_sobre .header p {
+  position: relative;
+
+}
+
+.historia_deus {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.historia_deus .header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.carousel-container {
+  position: relative;
+  width: 90%;
+  overflow: hidden;
+  margin: auto;
+  display: flex;
+}
+
+.card-carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  gap: 20px;
+}
+
+
+.card_carro .image_historia {
+  width: 100%;
+  height: 200px;
+  background: #0A3B4C;
+
+}
+
+.card_carro .title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card_carro .description {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 20px;
+}
+
+.card_carro .button {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 20px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  background: #0A3B4C;
+}
+
+.card_carro {
+  flex: 0 0 calc(25% - 100px);
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  padding: 10px;
+  margin: 10px;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 2rem;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.comentario_deus {
+  width: 100%;
+  height: 50vh;
+  background-color: #0A3B4C;
+  display: flex;
+
+  justify-content: space-around;
+  align-items: center;
+}
+
+.comentario_geral {
+  width: 100%;
+  height: auto;
+  max-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.comentario_geral .header {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container textarea {
+  margin-bottom: 10px;
+}
+
+.form-container {
+  width: 30%;
+  transition: transform 0.5s;
+
+}
+
+.ti {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  flex-direction: column;
+  transition: transform 0.5s;
+  width: 50%;
+}
+
+.comentario_deus .ti h4 {
+  position: relative;
+  font-size: 40px;
+  margin-bottom: 10px;
+
+}
+
+.comentario_deus .ti p {
+  font-size: 20px;
+  margin: 04px;
+}
+
+.comentario_deus button {
+  width: 150px;
+  height: 50px;
+  font-size: 17px;
+  background-color: white;
+  color: #0A3B4C;
+  border: none;
+  border-radius: 10px;
+  margin-top: 35px;
+  box-shadow: 0px 4px 10px #71A7B7;
+  transition: transform 0.5s ease;
+}
+
+.comentario_deus button:hover {
+  transform: scale(1.1);
+}
+
+.subscribe {
+  position: relative;
+  height: 170px;
+  width: 350px;
+  padding: 20px;
+  background-color: #FFF;
+  border-radius: 4px;
+  color: #333;
+  box-shadow: 0px 0px 60px 5px rgba(0, 0, 0, 0.4);
+}
+
+.subscribe:after {
+  position: absolute;
+  content: "";
+  right: -10px;
+  bottom: 18px;
+  width: 0;
+  height: 0;
+  border-left: 0px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #1a044e;
+}
+
+.subscribe p {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 4px;
+  line-height: 28px;
+}
+.subscribe .subscribe-input-name{
+  position: absolute;
+  border: none;
+  top: 70px;
+  border-bottom: 1px solid #d4d4d4;
+  padding: 15px;
+  width: 82%;
+  font-size: 15px;
+  background: transparent;
+  transition: all .25s ease;
+}
+.subscribe .subscribe-input {
+  position: absolute;
+  border: none;
+  top: 130px;
+  border-bottom: 1px solid #d4d4d4;
+  padding: 15px;
+  width: 82%;
+  font-size: 15px;
+  background: transparent;
+  transition: all .25s ease;
+}
+
+.subscribe input:focus {
+  outline: none;
+  border-bottom: 1px solid #0d095e;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', 'sans-serif';
+}
+
+.subscribe .submit-btn {
+  position: absolute;
+  border-radius: 30px;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  background-color: #0f0092;
+  color: #FFF;
+  padding: 15px 30px;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  right: -10px;
+  bottom: -20px;
+  cursor: pointer;
+  transition: all .25s ease;
+  box-shadow: -5px 6px 20px 0px rgba(26, 26, 26, 0.4);
+}
+
+.subscribe .submit-btn:hover {
+  background-color: #07013d;
+  box-shadow: -5px 6px 20px 0px rgba(88, 88, 88, 0.569);
+}
+
+.comen {
+  width: 90%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.comment-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: calc(25% - 20px);
+  height: auto;
+  padding: 16px;
+  box-sizing: border-box;
+  margin: 10px;
+}
+
+.comment-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.comment-header img {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin-right: 12px;
+}
+
+.comment-header .username {
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+.comment-header .time {
+  color: gray;
+  font-size: 14px;
+}
+
+.comment-header .options {
+  margin-left: auto;
+  color: gray;
+}
+
+.comment-body {
+  margin-bottom: 16px;
+}
+
+.comment-footer {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #e0e0e0;
+  padding-top: 8px;
+}
+
+.comment-footer .reply {
+  margin-right: auto;
+  color: gray;
+  font-size: 14px;
+}
+
+.comment-footer .icons {
+  color: gray;
+}
+
+.comment-footer .icons i {
+  margin-left: 16px;
+}
+
+.logo img {
+  width: 100px;
+}
+
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+}
+
+.container-login {
+  display: flex;
+  width: 800px;
+  height: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.left-panel {
+  background-color: #222452;
+  color: white;
+  width: 50%;
+  padding: 40px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-panel h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.left-panel p {
+  font-size: 16px;
+  margin-bottom: 40px;
+}
+
+.left-panel button {
+  background-color: #222452;
+  color: white;
+  border: 2px solid white;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.left-panel button:hover {
+  background-color: #7D83B9;
+}
+
+.right-panel {
+  background-color: white;
+  width: 50%;
+  padding: 40px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.right-panel h2 {
+  color: black;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.right-panel p {
+  color: black;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.input-group {
+  width: 100%;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px 40px;
+  border: 1px solid black;
+  border-radius: 25px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.input-group i {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: black;
+}
+
+.right-panel button {
+  background-color: #222452;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.right-panel .cadas:hover {
+  background-color: #222452;
+}
+
+.link1 {
+
+  border: none;
+  color: white;
+  text-decoration: none;
+
+}
+
+.card-email {
+  width: 300px;
+  height: 300px;
+  padding: 0 15px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 12px;
+  background: #fff;
+  border-radius: 20px;
+  transition: transform 0.5s;
+  margin-right: 100px;
+}
+
+.card-email>* {
+  margin: 0;
+}
+
+.card__title {
+  font-size: 23px;
+  font-weight: 900;
+  color: #333;
+}
+
+.card__content {
+  font-size: 13px;
+  line-height: 18px;
+  color: #333;
+
+}
+
+.card__form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+  top: 10px;
+}
+
+.card__form input {
+  margin-top: 10px;
+  outline: 0;
+  background: rgb(255, 255, 255);
+  box-shadow: transparent 0px 0px 0px 1px inset;
+  padding: 0.6em;
+  border-radius: 14px;
+  border: 1px solid #333;
+  color: black;
+}
+
+.card__form button {
+  border: 0;
+  background: #111;
+  color: #fff;
+  padding: 0.68em;
+  border-radius: 14px;
+  font-weight: bold;
+  position: relative;
+  left: 75px;
+}
+
+.sign-up:hover {
+  opacity: 0.8;
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  position: relative;
+  flex-direction: row-reverse;
+}
+
+.input {
+  border-style: none;
+  height: 30px;
+  width: 0;
+  padding: 10px;
+  outline: none;
+  border-radius: 50%;
+  transition: .5s ease-in-out;
+  background-color: #0A3B4C;
+  box-shadow: 0px 0px 3px #f3f3f3;
+  padding-right: 40px;
+  color: black;
+}
+
+.input::placeholder,
+.input {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 17px;
+}
+
+.input::placeholder {
+  color: #8f8f8f;
+}
+
+.icon-pesquisa {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 0px;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  outline: none;
+  border-style: none;
+  border-radius: 50%;
+  pointer-events: painted;
+  background-color: transparent;
+  transition: .2s linear;
+}
+
+.icon-pesquisa:focus~.input,
+.input:focus {
+  box-shadow: none;
+  width: 250px;
+  border-radius: 0px;
+  background-color: transparent;
+  border-bottom: 3px solid #0A3B4C;
+  transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+}
+
+.suggestions{
+  background-color: white;
+  box-shadow: 0px 4px 15px black;
+  width: 250px; 
+  position: relative;
+  top:110px;
+  left: 315px;
+  padding: 25px ;
+  display: flex;
+  justify-content: space-around;
+  overflow: hidden;
+}
+.suggestions div{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 17px;
+
+}

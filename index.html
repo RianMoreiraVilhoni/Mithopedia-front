@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Front-end</title>
+    <link rel="stylesheet" href="css/ajeitado.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <img src="images/logo1010100.png" alt="" style="width: 100px;">
+        </div>
+        <nav>
+            <ul>
+                <li> <a href="./index.html">Mitologias </a></li>
+                <li> <a href="./world.html">Mapa </a></li>
+            </ul>
+        </nav>
+
+        <div class="input-wrapper">
+            <button class="icon-pesquisa">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="25px" width="25px">
+                    <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="#fff"
+                        d="M11.5 21C16.7467 21 21 16.7467 21 11.5C21 6.25329 16.7467 2 11.5 2C6.25329 2 2 6.25329 2 11.5C2 16.7467 6.25329 21 11.5 21Z">
+                    </path>
+                    <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="#fff"
+                        d="M22 22L20 20"></path>
+                </svg>
+            </button>
+            <input placeholder="Pesquise por mitologia..." class="input" name="text" type="text" id="searchInput">
+            <div id="suggestions" class="suggestions" style="display: none;"></div>
+        </div>
+
+    </header>
+    <header class="banner">
+        <div class="column">
+            <a href="#"><img src="images/Astecas/Acuecucyoticihuati.jfif" alt="image"></a>
+            <a href="#"><img src="images/Astecas/Chalmecacihuilt.jfif" alt="image"></a>
+            <a href="#"><img src="images/Astecas/Tezcatlipoca.jfif" alt="image"></a>
+            <a href="#"><img src="images/Astecas/Ometeotl.jfif" alt="image"></a>
+        </div>
+        <div class="column">
+            <a href="#"><img src="images/Egípcios/Anúbis.jfif" alt="image"></a>
+            <a href="#"><img src="images/Egípcios/Hathor.jfif" alt="image"></a>
+            <a href="#"><img src="images/Egípcios/Rá-Tum.jfif" alt="image"></a>
+            <a href="#"><img src="images/Egípcios/Bastet.jfif" alt="image"></a>
+        </div>
+        <div class="column">
+            <a href="#"><img src="images/Gregos/Afrodite.jfif" alt="image"></a>
+            <a href="#"><img src="images/Gregos/Apolo.jfif" alt="image"></a>
+            <a href="#"><img src="images/Gregos/Ares.jfif" alt="image"></a>
+            <a href="#"><img src="images/Gregos/Atena.jfif" alt="image"></a>
+        </div>
+        <div class="column">
+            <a href="#"><img src="images/Hindu/Brahma.jfif" alt="image"></a>
+            <a href="#"><img src="images/Hindu/Ganesha.jfif" alt="image"></a>
+            <a href="#"><img src="images/Hindu/Lakshmi.jfif" alt="image"></a>
+            <a href="#"><img src="images/Hindu/Shiva.jfif" alt="image"></a>
+        </div>
+        <div class="column">
+            <a href="#"><img src="images/Iorubás/Iansã.jfif" alt="image"></a>
+            <a href="#"><img src="images/Iorubás/Iemanjá.jfif" alt="image"></a>
+            <a href="#"><img src="images/Iorubás/Ogun.jfif" alt="image"></a>
+            <a href="#"><img src="images/Iorubás/Olodumarê.jfif" alt="image"></a>
+        </div>
+        <div class="column">
+            <a href="#"><img src="images/Japoneses/Agyo and Ungyo.jfif" alt="image"></a>
+            <a href="#"><img src="images/Japoneses/Amaterasu.jfif" alt="image"></a>
+            <a href="#"><img src="images/Japoneses/Hachiman.jfif" alt="image"></a>
+            <a href="#"><img src="images/Japoneses/Inari.jfif" alt="image"></a>
+        </div>
+        <div class="column">
+            <a href="#"><img src="images/Nórdicos/Freya.jfif" alt="image"></a>
+            <a href="#"><img src="images/Nórdicos/Loki.jfif" alt="image"></a>
+            <a href="#"><img src="images/Nórdicos/Odin.jfif" alt="image"></a>
+            <a href="#"><img src="images/Nórdicos/Thor.jfif" alt="image"></a>
+        </div>
+        <div class="column">
+            <a href="#"><img src="images/Romanos/Apolo R.jfif" alt="image"></a>
+            <a href="#"><img src="images/Romanos/Vênus.jfif" alt="image"></a>
+            <a href="#"><img src="images/Romanos/Saturno.jfif" alt="image"></a>
+            <a href="#"><img src="images/Romanos/Flora.jfif" alt="image"></a>
+        </div>
+    </header>
+    <section class="sobre_mitologia">
+        <div class="header">
+            <p>
+                DESCOBRIR
+            </p>
+            <h1>
+                História Sobre Mitologia
+            </h1>
+            <div class="underline">
+            </div>
+        </div>
+        <section class="mito">
+
+
+            <div class="fotos_mito">
+                <img src="images/img (2).jpg" alt="" class="foto1">
+                <img src="images/img.jpg" alt="" class="foto2">
+            </div>
+            <div class="text_mito">
+
+
+                <p>A palavra "mitologia" deriva do grego antigo "mythos" (μῦθος), que significa "mito" ou "história", e
+                    logia" (λογία), que significa "estudo" ou "discurso". Portanto, mitologia pode ser entendida como o
+                    estudo ou o conjunto de mitos de uma determinada cultura.</p>
+
+                <p>Os mitos são narrativas tradicionais que têm como objetivo explicar fenômenos naturais, a origem
+                    do mundo, a natureza dos deuses e dos heróis, e as práticas culturais e sociais de um povo. Eles
+                    geralmente contêm elementos sobrenaturais e simbólicos e são transmitidos de geração em
+                    geração, muitas vezes através da oralidade, antes de serem registrados por escrito.
+
+                </p>
+                <p>Mitologia, então, se refere tanto ao conjunto dessas histórias quanto ao campo acadêmico que se
+                    dedica a estudá-las. As mitologias de diferentes culturas, como a grega, romana, nórdica, egípcia,
+                    chinesa, japonesa e muitas outras, oferecem uma visão profunda das crenças, valores, medos e
+                    aspirações das sociedades que as criaram.</p>
+                <p>
+                    Essas histórias são mais do que simples contos; elas desempenham um papel fundamental na
+                    formação da identidade cultural, na transmissão de valores morais e na compreensão do mundo ao
+                    redor. A mitologia também serve como uma ponte entre o passado e o presente, mostrando como as
+                    sociedades antigas compreendiam o mundo e como essas compreensões continuam a influenciar a
+                    cultura e a sociedade modernas.
+                </p>
+            </div>
+        </section>
+    </section>
+    <section class="mitologia">
+        <div class="header">
+            <p>
+                DESCOBRIR
+            </p>
+            <h1>
+                Mundos Antigos
+            </h1>
+            <div class="underline">
+            </div>
+        </div>
+        <div class="container" id="MitologiaList">
+
+        </div>
+    </section>
+    <section class="comentario">
+        <div class="ti">
+            <h3>Avaliação Mítica</h3>
+            <p>Compartilhe sua opinião e nos ajude</p>
+            <p>a trazer o melhor da mitologia</p>
+            <p>antiga para o presente.</p>
+            <p>Queremos ouvir de você!</p>
+            <button id="enviar-btn">Mande sua mensagem!</button>
+        </div>
+        <div class="card-email" style="display: none;">
+            <span class="card__title">Avaliação</span>
+            <p class="card__content">Get fresh web design resources delivered straight to your inbox every week.
+            </p>
+            <div class="card__form">
+                <input placeholder="Your Email" type="text">
+                <input placeholder="Mensagem" type="text">
+                <button class="sign-up"> Sign up</button>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="historia_deus">
+        <div class="header">
+            <p>DESCOBRIR</p>
+            <h1>Deuses</h1>
+            <div class="underline"></div>
+        </div>
+        <div class="header">
+            <p>Mitologia Nórdica</p>
+            <div class="underline"></div>
+        </div>
+        <!--Mitologia nordica-->
+        <div class="carousel-container">
+            <button class="carousel-btn prev">‹</button>
+            
+            <div class="card-carousel" id="god-list">
+                <a href="deuses.html?iddeus=1" style="text-decoration: none;">
+                    <div class="deus-card">
+                        <img alt="Chinese gods and goddesses illustration" height="150"
+                            src="http://localhost:8000/images/Loki.jfif"
+                            width="250" />
+                        <div class="deus-card-content">
+                            <div class="deus-card-icon">
+                                <i class="fas fa-gem">
+                                </i>
+                            </div>
+                            <div class="deus-card-title">
+                                Loki
+                            </div>
+                            <div class="deus-card-description">
+                                Loki é um deus da mitologia nórdica, conhecido como o deus da trapaça e da desordem.
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="deuses.html?iddeus=3" style="text-decoration: none;">
+                    <div class="deus-card">
+                        <img alt="Chinese gods and goddesses illustration" height="150"
+                            src="http://localhost:8000/images/Loki.jfif"
+                            width="250" />
+                        <div class="deus-card-content">
+                            <div class="deus-card-icon">
+                                <i class="fas fa-gem">
+                                </i>
+                            </div>
+                            <div class="deus-card-title">
+                                Zeus
+                            </div>
+                            <div class="deus-card-description">
+                                Na mitologia grega, Zeus é o deus supremo do Olimpo, responsável por manter a ordem e a justiça.
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                
+                
+            </div>
+        
+            <button class="carousel-btn next">›</button>
+        </div>
+    
+    </section>
+    <!-- <section class="algo">
+        <div class="deus-container">
+            <div class="deus-subtitle">
+                CONHEÇA
+            </div>
+            <div class="deus-title">
+                Deuses Populares
+            </div>
+            <div class="deus-underline">
+            </div>
+            <div class="deus-card-container">
+                <div class="deus-card">
+                    <img alt="Japanese gods and goddesses illustration" height="150"
+                        src="https://storage.googleapis.com/a1aa/image/y1zg64PI9JLvAZqZN6Xxn8foiSS8H6DJV0vTtTGY1XkLoi1JA.jpg"
+                        width="250" />
+                    <div class="deus-card-content">
+                        <div class="deus-card-icon">
+                            <i class="fas fa-gem">
+                            </i>
+                        </div>
+                        <div class="deus-card-collection">
+                            Collection
+                        </div>
+                        <div class="deus-card-title">
+                            Japanese Gods
+                        </div>
+                        <div class="deus-card-description">
+                            The gods and goddesses of Japan, primordial creators and incarnations of nature
+                        </div>
+                    </div>
+                </div>
+                <div class="deus-card">
+                    <img alt="Celtic gods and goddesses illustration" height="150"
+                        src="https://storage.googleapis.com/a1aa/image/jZopvseepmrQn0QTPtuIEw2xIKNZlRqFiiWYeeiv9LwrBVsOB.jpg"
+                        width="250" />
+                    <div class="deus-card-content">
+                        <div class="deus-card-icon">
+                            <i class="fas fa-gem">
+                            </i>
+                        </div>
+                        <div class="deus-card-collection">
+                            Collection
+                        </div>
+                        <div class="deus-card-title">
+                            Celtic Gods
+                        </div>
+                        <div class="deus-card-description">
+                            Deities of the Celtic peoples, ruling over both human actions and the natural world
+                        </div>
+
+                    </div>
+                </div>
+                <div class="deus-card">
+                    <img alt="Roman gods and goddesses illustration" height="150"
+                        src="https://storage.googleapis.com/a1aa/image/IWhjiiFLc44DGNsqxOx0riPyZtkGgvtmuHnNzyBFKvdFUx6E.jpg"
+                        width="250" />
+                    <div class="deus-card-content">
+                        <div class="deus-card-icon">
+                            <i class="fas fa-gem">
+                            </i>
+                        </div>
+                        <div class="deus-card-collection">
+                            Collection
+                        </div>
+                        <div class="deus-card-title">
+                            Roman Gods
+                        </div>
+                        <div class="deus-card-description">
+                            Pantheon of gods and goddesses who held sway over ancient Rome
+                        </div>
+
+                    </div>
+                </div>
+                <div class="deus-card">
+                    <img alt="Chinese gods and goddesses illustration" height="150"
+                        src="https://storage.googleapis.com/a1aa/image/4lgyzxTCjeQrXaJqqTaoqfM92OYBjCe5d3qPaJezaM8jBVsOB.jpg"
+                        width="250" />
+                    <div class="deus-card-content">
+                        <div class="deus-card-icon">
+                            <i class="fas fa-gem">
+                            </i>
+                        </div>
+                        <div class="deus-card-collection">
+                            Collection
+                        </div>
+                        <div class="deus-card-title">
+                            Chinese Gods
+                        </div>
+                        <div class="deus-card-description">
+                            The vast pantheon of gods and goddesses who rule both the heavens and the earth
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="deus-card-container">
+                <div class="deus-card">
+                    <img alt="Japanese gods and goddesses illustration" height="150"
+                        src="https://storage.googleapis.com/a1aa/image/y1zg64PI9JLvAZqZN6Xxn8foiSS8H6DJV0vTtTGY1XkLoi1JA.jpg"
+                        width="250" />
+                    <div class="deus-card-content">
+                        <div class="deus-card-icon">
+                            <i class="fas fa-gem">
+                            </i>
+                        </div>
+                        <div class="deus-card-collection">
+                            Collection
+                        </div>
+                        <div class="deus-card-title">
+                            Japanese Gods
+                        </div>
+                        <div class="deus-card-description">
+                            The gods and goddesses of Japan, primordial creators and incarnations of nature
+                        </div>
+
+                    </div>
+                </div>
+                <div class="deus-card">
+                    <img alt="Celtic gods and goddesses illustration" height="150"
+                        src="https://storage.googleapis.com/a1aa/image/jZopvseepmrQn0QTPtuIEw2xIKNZlRqFiiWYeeiv9LwrBVsOB.jpg"
+                        width="250" />
+                    <div class="deus-card-content">
+                        <div class="deus-card-icon">
+                            <i class="fas fa-gem">
+                            </i>
+                        </div>
+                        <div class="deus-card-collection">
+                            Collection
+                        </div>
+                        <div class="deus-card-title">
+                            Celtic Gods
+                        </div>
+                        <div class="deus-card-description">
+                            Deities of the Celtic peoples, ruling over both human actions and the natural world
+                        </div>
+
+                    </div>
+                </div>
+                <div class="deus-card">
+                    <img alt="Roman gods and goddesses illustration" height="150"
+                        src="https://storage.googleapis.com/a1aa/image/IWhjiiFLc44DGNsqxOx0riPyZtkGgvtmuHnNzyBFKvdFUx6E.jpg"
+                        width="250" />
+                    <div class="deus-card-content">
+                        <div class="deus-card-icon">
+                            <i class="fas fa-gem">
+                            </i>
+                        </div>
+                        <div class="deus-card-collection">
+                            Collection
+                        </div>
+                        <div class="deus-card-title">
+                            Roman Gods
+                        </div>
+                        <div class="deus-card-description">
+                            Pantheon of gods and goddesses who held sway over ancient Rome
+                        </div>
+
+                    </div>
+                </div>
+                <div class="deus-card">
+                    <img alt="Chinese gods and goddesses illustration" height="150"
+                        src="https://storage.googleapis.com/a1aa/image/4lgyzxTCjeQrXaJqqTaoqfM92OYBjCe5d3qPaJezaM8jBVsOB.jpg"
+                        width="250" />
+                    <div class="deus-card-content">
+                        <div class="deus-card-icon">
+                            <i class="fas fa-gem">
+                            </i>
+                        </div>
+                        <div class="deus-card-collection">
+                            Collection
+                        </div>
+                        <div class="deus-card-title">
+                            Chinese Gods
+                        </div>
+                        <div class="deus-card-description">
+                            The vast pantheon of gods and goddesses who rule both the heavens and the earth
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <section class="rodape">
+        <div class="rodape_sobre">
+            <div class="text_rodape">
+                <img src="" alt="Logo">
+
+                <p> Nam fermentum orci dui, in pharetra massa cursus vitae. Nulla sed lacinia tellus, et ullamcorper
+                    nunc. Nulla condimentum vestibulum ultrices. In imperdiet mi id iaculis tincidunt. Pellentesque a
+                    lacus iaculis, cursus elit pellentesque, vehicula metus.</p>
+
+                <button>Enter your email -></button>
+            </div>
+            <div class="mito_rodape">
+
+                <h1>Mitologias</h1>
+
+                <div class="listas">
+                    <div class="lista">
+                        <li>Grecia</li>
+                        <li>Egipcia</li>
+                        <li>Nordica</li>
+                        <li>Romana</li>
+                        <li>Hindu</li>
+                    </div>
+                    <div class="lista">
+                        <li>Japonesa</li>
+                        <li>Asteca</li>
+                        <li>Ioruba</li>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <footer>
+            <p>© 2022&nbsp;Good Of Code Inc. All Rights Reserved.&nbsp;Privacy Policy.</p>
+        </footer>
+    </section>
+
+
+    <script src="js/script.js">
+
+    </script>
+
+</body>
+
+</html>

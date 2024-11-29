@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento da Mythopedia</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <aside>
+        <img src="../images/logo-site.png" alt="">
+        <br><br>
+        <ul class="menu-hover-fill flex flex-col items-start leading-none text-2xl uppercase space-y-4">
+            <li><a href="historias.html" data-text="home">Historias</a></li>
+            <li><a href="mitologias.html" data-text="archives">Mitologias</a></li>
+            <li><a href="deuses.html" data-text="tags">Deuses</a></li>
+            <li><a href="comentarios.html" data-text="categories">Comentarios</a></li>
+            <li><a href="users.html" data-text="about">Usuarios</a></li>
+        </ul>
+    </aside>
+    <main style="width: 100vh;">
+        
+        <div class="container">
+            <div class="content">
+                <div class="title">
+                    <h1>Gerenciar Mitologias</h1>
+                    <div class="text-center my-4">
+                        <button class="btn btn-primary" style="background-color: #1abc9c;" onclick="ShowInput()">Adicionar Nova Mitologia</button>
+                    </div>
+                </div>
+            
+                <div class="StoryList" id="StoryList">
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+
+    </main>
+
+</body>
+<script src="js/hisscript.js"></script>
+</html>
